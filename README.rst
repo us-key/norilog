@@ -37,3 +37,15 @@ Webブラウザーでコメントを投稿するWebアプリケーションの�
 
  (venv) $ pip install -e .
  
+ 依存ライブラリ変更時
+ -------------------
+
+ 1. ``setup.py`` の ``install_requires`` を更新する
+ 2. 以下の手順で環境を更新する::
+
+ (venv) $ deactivate
+ $ python3.6 -m venv --clear venv
+ $ source venv/bin/activate
+ (venv) $ pip install -e ./norilog
+
+ 3. setup.pyをリポジトリーにコミットする
